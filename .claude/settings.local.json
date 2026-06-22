@@ -1,7 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "Bash(perl -pi -e 's/springboot43xy9/SchoolMap/g' \"D:/keshe/keshe/springboot43xy9/target/classes/admin/admin/dist/js/app.d539986c.js.map\")"
-    ]
-  }
-}
