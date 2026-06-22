@@ -1,0 +1,21 @@
+<view class="container">
+  <view class="header">
+    <text class="title">系统介绍</text>
+  </view>
+
+  <view class="content" wx:if="{{!loading}}">
+    <rich-text wx:if="{{introText}}" nodes="{{introText}}"></rich-text>
+    <view wx:if="{{!introText && fileList.length === 0}}" class="empty">暂无系统介绍</view>
+
+    <!-- 附件列表 -->
+    <view class="file-section" wx:if="{{fileList.length > 0}}">
+      <view class="file-item" wx:for="{{fileList}}" wx:key="url" data-url="{{item.url}}" data-name="{{item.name}}" bindtap="openFile">
+        <text class="file-name">附件：{{item.name}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="loading" wx:else>
+    <text>加载中...</text>
+  </view>
+</view>

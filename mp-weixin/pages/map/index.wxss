@@ -1,0 +1,148 @@
+.content {
+  box-sizing: border-box;
+  min-height: 100vh;
+  padding: 24rpx 24rpx 128rpx;
+  background: linear-gradient(180deg, #eefaf5 0%, #f7fbff 100%);
+}
+
+.search-bar {
+  padding: 20rpx 24rpx;
+  border-radius: 24rpx;
+  background: #ffffff;
+  box-shadow: 0 16rpx 40rpx rgba(33, 92, 72, 0.08);
+}
+
+.search-input {
+  width: 100%;
+  height: 72rpx;
+  color: #1f2937;
+  font-size: 28rpx;
+}
+
+.action-row {
+  display: flex;
+  margin-top: 20rpx;
+}
+
+.action-btn {
+  flex: 1;
+  margin: 0;
+  border-radius: 999rpx;
+}
+
+.action-btn + .action-btn {
+  margin-left: 20rpx;
+}
+
+.action-btn.secondary {
+  color: #17795d;
+  background: #ffffff;
+  border: 1rpx solid #b9dfd2;
+}
+
+.action-btn::after {
+  border: 0;
+}
+
+.selected-card {
+  margin-top: 20rpx;
+  padding: 24rpx;
+  border-radius: 24rpx;
+  background: #ffffff;
+  box-shadow: 0 16rpx 40rpx rgba(33, 92, 72, 0.08);
+}
+
+.selected-label {
+  color: #6b7280;
+  font-size: 22rpx;
+}
+
+.selected-title {
+  margin-top: 10rpx;
+  color: #111827;
+  font-size: 32rpx;
+  font-weight: 600;
+}
+
+.selected-address {
+  margin-top: 12rpx;
+  color: #4b5563;
+  font-size: 24rpx;
+  line-height: 1.6;
+}
+
+.route-meta {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 16rpx;
+}
+
+.route-chip {
+  margin-right: 16rpx;
+  margin-bottom: 10rpx;
+  padding: 8rpx 18rpx;
+  border-radius: 999rpx;
+  color: #0f766e;
+  font-size: 22rpx;
+  background: #e7f7f3;
+}
+
+.route-note {
+  margin-top: 8rpx;
+  color: #b45309;
+  font-size: 22rpx;
+  line-height: 1.6;
+}
+
+.map-wrapper {
+  position: relative;
+  margin-top: 20rpx;
+  border-radius: 28rpx;
+  overflow: hidden;
+  box-shadow: 0 20rpx 48rpx rgba(33, 92, 72, 0.12);
+}
+
+.map {
+  width: 100%;
+  height: 860rpx;
+}
+
+.option {
+  position: absolute;
+  top: 16rpx;
+  left: 16rpx;
+  right: 16rpx;
+  max-height: 360rpx;
+  padding: 8rpx;
+  box-sizing: border-box;
+  border-radius: 20rpx;
+  background: rgba(255, 255, 255, 0.96);
+  z-index: 9;
+}
+
+.column_item {
+  padding: 18rpx 20rpx;
+  border-radius: 16rpx;
+}
+
+.column_item + .column_item {
+  margin-top: 8rpx;
+}
+
+.column_item:active {
+  background: #edf7f3;
+}
+
+.item-title {
+  color: #111827;
+  font-size: 28rpx;
+  font-weight: 600;
+}
+
+.item-desc {
+  margin-top: 6rpx;
+  color: #6b7280;
+  font-size: 22rpx;
+  line-height: 1.5;
+}
+

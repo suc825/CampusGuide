@@ -1,0 +1,66 @@
+<view class="content">
+  <view class="search-bar">
+    <input
+      class="search-input"
+      type="text"
+      placeholder="搜索目的地"
+      value="{{key}}"
+      bindinput="onSearchInput"
+    />
+  </view>
+
+  <view class="action-row">
+    <button
+      class="action-btn secondary"
+      size="mini"
+      bindtap="resetToCurrentLocation"
+    >
+      我的位置
+    </button>
+    <button
+      class="action-btn secondary"
+      size="mini"
+      bindtap="handleChooseLocation"
+    >
+      地图选点
+    </button>
+  </view>
+
+  <view class="selected-card">
+    <view class="selected-label">当前目的地</view>
+    <view class="selected-title">{{destinationName || '未选择目的地'}}</view>
+    <view class="selected-address">{{destinationAddress || '可先搜索地点，也可以直接使用地图选点。'}}</view>
+    <view wx:if="{{routeInfo.distanceText}}" class="route-meta">
+      <text class="route-chip">{{routeInfo.modeText || '路线信息'}}</text>
+      <text class="route-chip">约 {{routeInfo.distanceText}}</text>
+      <text class="route-chip">预计 {{routeInfo.durationText}}</text>
+    </view>
+    <view wx:if="{{routeInfo.noteText}}" class="route-note">{{routeInfo.noteText}}</view>
+  </view>
+
+  <view class="map-wrapper">
+    <map
+      class="map"
+      id="map"
+      latitude="{{latitude}}"
+      longitude="{{longitude}}"
+      markers="{{markers}}"
+      polyline="{{polyline}}"
+      include-points="{{includePoints}}"
+      show-location
+    ></map>
+
+    <scroll-view wx:if="{{IsOption}}" class="option" scroll-y="true">
+      <block wx:for="{{suggestions}}" wx:for-item="item" wx:for-index="index" wx:key="index">
+        <view
+          class="column_item"
+          data-index="{{index}}"
+          bindtap="onSuggestionTap"
+        >
+          <view class="item-title">{{item.title}}</view>
+          <view class="item-desc">{{item.address}}</view>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+</view>

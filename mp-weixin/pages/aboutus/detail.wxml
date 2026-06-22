@@ -1,0 +1,33 @@
+<view class="data-v-4a38680e">
+  <mescroll-uni
+    vue-id="0207e098-1"
+    up="{{upOption}}"
+    down="{{downOption}}"
+    data-event-opts="{{[['^init',[['mescrollInit']]],['^down',[['downCallback']]],['^up',[['upCallback']]]]}}"
+    bind:init="__e"
+    bind:down="__e"
+    bind:up="__e"
+    class="data-v-4a38680e"
+    bind:__l="__l"
+    vue-slots="{{['default']}}">
+    <view class="content data-v-4a38680e">
+      <view class="container data-v-4a38680e" style="min-height:100vh;width:100%;padding:40rpx 0 132rpx;position:relative;background:#fff;height:auto;">
+        <view class="detail-content data-v-4a38680e" style="padding:24rpx;background:none;display:flex;flex-direction:column;width:100%;height:auto;">
+          <block wx:if="{{detail.picture1}}">
+            <image
+              style="width:100%;height:400rpx;border-radius:16rpx;object-fit:cover;display:block;margin-bottom:24rpx;"
+              src="{{baseUrl+detail.picture1}}"
+              mode="aspectFill"
+              class="data-v-4a38680e">
+            </image>
+          </block>
+          <view class="rich-text data-v-4a38680e" style="min-height:300rpx;padding:24rpx;border-radius:16rpx;background:#f9f9f9;width:100%;line-height:1.8;font-size:28rpx;color:#333;box-sizing:border-box;">
+            <rich-text nodes="{{detail.content}}" class="data-v-4a38680e"></rich-text>
+          </view>
+        </view>
+        <view class="bottom-content bg-white tabbar border shop data-v-4a38680e" style="width:100%;padding:20rpx 0px;flex-wrap:wrap;background:none;display:flex;height:auto;">
+        </view>
+      </view>
+    </view>
+  </mescroll-uni>
+</view>
